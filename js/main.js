@@ -471,12 +471,16 @@ function setAboutImgAndP(aboutMainElement, aboutSectionImgElement, itemElement) 
     aboutMainElement.style.opacity = '1';
     if (itemElement === 'goals') {
         if (mediaQuery768px.matches) {
-            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 12%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals-mobile.webp');");
-            //aboutSectionImgElement.style = "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 12%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals-mobile.webp');";
+            if(currentPage === 'West Trans UA - компанія')
+                aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 12%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals-mobile.webp');");
+            else
+                aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 12%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('../img/About-us/goals-mobile.webp');");
         }
         else {
-            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals.webp');");
-            //aboutSectionImgElement.style = "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals.webp');";
+            if(currentPage === 'West Trans UA - компанія')
+                aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/goals.webp');");
+            else
+                aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('../img/About-us/goals.webp');");
         }
         if (navLanguage.textContent == "UA") {
             aboutSectionContentP1.innerHTML = 'Якість. Якісно отримувати бажаний результат';
@@ -490,12 +494,16 @@ function setAboutImgAndP(aboutMainElement, aboutSectionImgElement, itemElement) 
         }
     }
     else if (itemElement === 'aim') {
-        aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/aim.webp');");
-        //aboutSectionImg.style = "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/aim.webp');";
+        if(currentPage === 'West Trans UA - компанія')
+            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/aim.webp');");
+        else
+            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('../img/About-us/aim.webp');");
     }
     else if (itemElement === 'tasks') {
-        aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/tasks.webp');");
-        //aboutSectionImgElement.style = "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/tasks.webp');";
+        if(currentPage === 'West Trans UA - компанія')
+            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('./img/About-us/tasks.webp');");
+        else
+            aboutSectionImgElement.setAttribute("style", "background-image: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0) 7%, #FFFFFF 52.98%, rgba(255, 255, 255, 0) 100%), url('../img/About-us/tasks.webp');");
 
         if (navLanguage.textContent == "UA") {
             aboutSectionContentP1.innerHTML = 'Підвищення ефективності логістичних послуг';
