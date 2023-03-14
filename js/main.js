@@ -654,10 +654,15 @@ var navbarNavs1 = document.getElementById('navbar-navs-1');
 if(window.innerHeight < 460){
     if(!navbarNavs1.classList.contains('overflow-scroll'))
         navbarNavs1.classList.add('overflow-scroll');
+    
+    navbarCollapseMenu.setAttribute('style', 'overflow: hidden');
 }
 else {
     if(navbarNavs1.classList.contains('overflow-scroll'))
         navbarNavs1.classList.remove('overflow-scroll');
+    
+    if (navbarCollapseMenu.hasAttribute('style'))
+        navbarCollapseMenu.removeAttribute('style');
 }
 var startWindowX = 0;
 var startAboutMainTranslateX = 0;
@@ -706,10 +711,16 @@ function windowResize() {
     if(window.innerHeight < 460){
         if(!navbarNavs1.classList.contains('overflow-scroll'))
             navbarNavs1.classList.add('overflow-scroll');
+
+        if(!navbarCollapseMenu.hasAttribute('style'))
+            navbarCollapseMenu.setAttribute('style', 'overflow: hidden');
     }
     else {
         if(navbarNavs1.classList.contains('overflow-scroll'))
             navbarNavs1.classList.remove('overflow-scroll');
+
+        if (navbarCollapseMenu.hasAttribute('style'))
+            navbarCollapseMenu.removeAttribute('style');
     }
 }
 
