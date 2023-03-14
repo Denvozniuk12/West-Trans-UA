@@ -292,9 +292,9 @@ nav.nav {
     display: none;
 }
 
-#nav-dropdown-menu.en {
-    width: 80%;
-    left: 10%;
+#nav-dropdown-menu {
+    width: 70%;
+    left: 15%;
 }
 
 

@@ -101,7 +101,9 @@
     }
 
     #navbar-navs-1 {
+        width: 100%;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     #navbar-nav-1.menu-open {
