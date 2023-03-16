@@ -668,6 +668,7 @@ else {
 var startWindowX = 0;
 var startAboutMainTranslateX = 0;
 function windowResize() {
+    console.log('window resized!')
     if(mediaQuery320px.matches) {
         if(aboutMain)
             aboutMain.removeAttribute('style');
@@ -739,24 +740,26 @@ var calcEuro = document.getElementById('calcExampleFormControlInput7');
 
 
 // Зробити AJAX запит
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    // Розпарсити відповідь API в JSON
-    var response = JSON.parse(xhr.responseText);
-    // Знайти курс гривні до євро
-    var euroRate = response.find(function(currency) {
-      return currency.ccy === "EUR";
-    });
-    // Вставити курс валюти в поле input
-    calcEuro.value = euroRate.buy;
-  }
-};
-xhr.onerror = function() {
-    console.error("Помилка запиту до сервера");
-  };
-xhr.send();
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11", true);
+// xhr.onreadystatechange = function() {
+//   if (xhr.readyState === 4 && xhr.status === 200) {
+//     // Розпарсити відповідь API в JSON
+//     var response = JSON.parse(xhr.responseText);
+//     // Знайти курс гривні до євро
+//     var euroRate = response.find(function(currency) {
+//       return currency.ccy === "EUR";
+//     });
+//     // Вставити курс валюти в поле input
+//     calcEuro.value = euroRate.buy;
+//   }
+// };
+// xhr.onerror = function() {
+//     console.error("Помилка запиту до сервера");
+//   };
+// xhr.send();
+
+
 
 // const url = 'https://api.allorigins.win/raw?url=https://index.minfin.com.ua/ua/markets/fuel/dt/';
 

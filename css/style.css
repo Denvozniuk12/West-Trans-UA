@@ -493,7 +493,7 @@ section.services .container {
 
 .gallery {
     padding: 0;
-    height: 429px;
+    min-height: 429px;
 }
 
 .gallery-list {

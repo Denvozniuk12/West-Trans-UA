@@ -509,7 +509,7 @@
     }
 
     .gallery {
-        height: 316px;
+        min-height: 320px;
     }
 
     .gallery-list {
